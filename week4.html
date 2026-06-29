@@ -160,6 +160,12 @@
       <p>Put a human checkpoint before any <strong>irreversible action</strong> &mdash; sending an email, making a purchase, publishing content, executing code in production. Everything before that can be autonomous. Everything after needs a human approval step.</p>
     </div>
   </div>
+
+  <div class="callout" style="border-left-color:var(--amber);background:#FFFBEF;">
+    <div class="callout__label" style="color:#996600;">&#128737; Responsible-AI Beat &mdash; Oversight by design</div>
+    <p>Good agent teams decide <strong>where a human approves</strong> <em>before</em> they&rsquo;re built &mdash; not after something goes wrong. After you draw your pipeline below, mark a &#128721; everywhere a human must approve before the agent continues. The rule of thumb: a checkpoint is required before any action that is <strong>irreversible or affects someone else</strong> &mdash; sending an email, spending money, publishing, submitting a form, sharing personal data. Litmus test: <em>&ldquo;If the agent gets this step wrong, can you undo it?&rdquo;</em> If no, a human belongs in the loop there.</p>
+  </div>
+
   <div class="activity">
     <div class="activity__badge">&#9999; Activity &mdash; Design Your Agent Team</div>
     <h3>Map a multi-agent pipeline from scratch</h3>
@@ -172,7 +178,7 @@
     <div class="field"><label>Worker Agent 1 &mdash; name, specialty, input, output</label><textarea id="w1" placeholder="e.g. Research Agent &mdash; searches for relevant information, outputs structured facts"></textarea></div>
     <div class="field"><label>Worker Agent 2 &mdash; name, specialty, input, output</label><textarea id="w2" placeholder="What does this agent specialize in?"></textarea></div>
     <div class="field"><label>Worker Agent 3 (optional)</label><textarea id="w3" placeholder="Add a third worker if needed..."></textarea></div>
-    <div class="field"><label>Where does a human stay in the loop?</label><textarea id="human" placeholder="Before which action should a human review? Why?"></textarea></div>
+    <div class="field"><label>&#128721; Approval checkpoints &mdash; where must a human approve before the agent continues?</label><textarea id="human" placeholder="List each checkpoint: which action it's before, why a human must approve, and what they're checking for. (Anything irreversible or affecting someone else needs one.)"></textarea></div>
     <div class="field"><label>Biggest risk if one agent fails</label><textarea id="risk" placeholder="What cascades if Worker 1 produces bad output?"></textarea></div>
     <div class="submit-row"><button class="btn btn--primary" onclick="submitActivity()">Complete Activity</button><button class="btn btn--ghost" onclick="clearActivity()">Clear</button></div>
     <div id="activity-result"></div>
@@ -202,6 +208,7 @@
   <a href="index.html" class="lesson-footer__logo">Agent<em>Edu</em></a>
   <div style="display:flex;gap:20px;">
     <a href="index.html">&larr; Back to Course</a>
+    <a href="portfolio.html">Your Portfolio</a>
     <a href="./AgentEdu_StudentReference.pdf" download>Reference Card PDF</a>
     <a href="mailto:hello@agentedu.org">hello@agentedu.org</a>
   </div>

@@ -167,9 +167,10 @@
       <div class="card"><div class="card__icon">&#128269;</div><div class="card__title">Option A: Research Agent</div><div class="card__desc">Give it a topic &rarr; it researches, summarizes key findings, and lists open questions.</div></div>
       <div class="card"><div class="card__icon">&#128218;</div><div class="card__title">Option B: Study Buddy</div><div class="card__desc">Tell it your subject and weak areas &rarr; it creates a personalized study plan with practice questions.</div></div>
       <div class="card"><div class="card__icon">&#9997;</div><div class="card__title">Option C: Creative Agent</div><div class="card__desc">Give it a genre and theme &rarr; it writes a short story then critiques its own writing.</div></div>
+      <div class="card" style="border-color:var(--amber);"><div class="card__icon">&#127757;</div><div class="card__title">Option D: Community Impact Agent &#9733;</div><div class="card__desc">Pick a real problem in your school or community &rarr; build an agent that helps, <strong>plus</strong> a one-page agent policy. The recommended <strong>capstone / portfolio</strong> track &mdash; you demo the build <em>and</em> the policy together.</div></div>
     </div>
     <div class="field-row">
-      <div class="field"><label>Option chosen</label><select id="choice"><option value="">Select...</option><option>A: Research Agent</option><option>B: Study Buddy</option><option>C: Creative Agent</option></select></div>
+      <div class="field"><label>Option chosen</label><select id="choice"><option value="">Select...</option><option>A: Research Agent</option><option>B: Study Buddy</option><option>C: Creative Agent</option><option>D: Community Impact Agent (capstone)</option></select></div>
       <div class="field"><label>Tool used</label><select id="tool"><option value="">Select...</option><option>Claude.ai</option><option>ChatGPT Custom GPT</option><option>Zapier AI Agents</option><option>Make.com</option><option>Other</option></select></div>
     </div>
     <div class="field"><label>Your system prompt (paste the full text)</label><textarea id="sysprompt" placeholder="Paste the full system prompt you wrote..."></textarea></div>
@@ -180,6 +181,13 @@
       <div class="field"><label>One thing it does surprisingly well</label><input type="text" id="strength" placeholder="Something that impressed you..."/></div>
       <div class="field"><label>One thing it still cannot do</label><input type="text" id="weakness" placeholder="A limitation you would fix with more time..."/></div>
     </div>
+    <div class="callout" style="border-left-color:var(--amber);background:#FFFBEF;margin:8px 0 4px;">
+      <div class="callout__label" style="color:#996600;">&#128737; Demo Day &mdash; The Three Accountability Questions</div>
+      <p>Every builder answers these three at their demo &mdash; they&rsquo;re part of the grade. This is where &ldquo;Who owns this agent&rsquo;s decisions?&rdquo; from Week 1 pays off, and it&rsquo;s exactly the mindset real AI teams hire for.</p>
+    </div>
+    <div class="field"><label>1. What could go wrong? (a realistic failure mode)</label><textarea id="acc-wrong" placeholder="Where and how could your agent fail in a way that matters?"></textarea></div>
+    <div class="field"><label>2. Who is responsible if it fails &mdash; and how would they catch it?</label><textarea id="acc-who" placeholder="If someone relied on your agent and it gave bad output, who's accountable?"></textarea></div>
+    <div class="field"><label>3. What data did you use? (and is any of it sensitive?)</label><textarea id="acc-data" placeholder="What did your agent read or store? Any personal or sensitive data?"></textarea></div>
     <div class="submit-row"><button class="btn btn--primary" onclick="submitActivity()">Submit Build Worksheet</button><button class="btn btn--ghost" onclick="clearActivity()">Clear</button></div>
     <div id="activity-result"></div>
   </div>
@@ -208,6 +216,7 @@
   <a href="index.html" class="lesson-footer__logo">Agent<em>Edu</em></a>
   <div style="display:flex;gap:20px;">
     <a href="index.html">&larr; Back to Course</a>
+    <a href="portfolio.html">Your Portfolio</a>
     <a href="./AgentEdu_StudentReference.pdf" download>Reference Card PDF</a>
     <a href="mailto:hello@agentedu.org">hello@agentedu.org</a>
   </div>
