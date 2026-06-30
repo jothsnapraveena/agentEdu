@@ -25,6 +25,12 @@ Each week includes:
 
 Weeks 1–4 are concept-building. Week 5 is full hands-on build. Week 6 is reflection and future-thinking. You can run all 6 weeks or pick individual weeks as standalone modules.
 
+**Two threads run through every week:**
+- **A Responsible-AI thread** — each week has a short beat on accountability, harm, oversight, or ethics. It starts with "Who owns this agent's decisions?" in Week 1 and pays off at Demo Day in Week 5, so students learn to *govern* agents, not just build them.
+- **A Portfolio thread** — each week produces one artifact. Collected together (see the **Portfolio Tracker** and `portfolio.html`), they become a college-application-ready piece.
+
+See the **Equity & Access** section for no-login, offline, and 45-minute versions of every activity.
+
 ---
 
 ## Week 1 — What Is an AI Agent?
@@ -56,6 +62,15 @@ By the end of this lesson, students will be able to:
 2. What would have to be true for an AI agent to be trustworthy enough to act without asking you first?
 3. Can you think of a situation where an AI agent acting autonomously could go wrong?
 
+### Responsible-AI Beat — "Who Owns This Agent's Decisions?" (5 min)
+Run this as a short closing discussion *after* students have seen real agents — it lands better once they have concrete examples in mind than as an opener. Pose one question:
+
+> **When an AI agent makes a decision and it turns out to be wrong — who is responsible?** The person who built it? The person who used it? The company that sold it? The agent itself?
+
+There's no clean answer, and that's the point. Every agent decision traces back to a human who is accountable for it. This is the first thread of a "responsible AI" mindset that runs through all six weeks (it returns at Demo Day in Week 5). Keep it to 5 minutes — you're planting the question, not resolving it.
+
+**Plain-language data note for students:** the apps you mapped above collect data about *you* to make their decisions, and you have a say in that.
+
 ### Student Activity — The Agent Hunt
 Students choose a technology they use regularly (a recommendation engine, a voice assistant, an autocomplete tool, etc.) and fill in the Agent Profile worksheet:
 
@@ -72,6 +87,7 @@ One way it could fail or make a mistake: _______________
 ### Teacher Notes
 - Students often conflate "AI agent" with "chatbot." Emphasize that the key differentiator is autonomy — agents take sequences of actions to reach a goal, not just answer one question.
 - If students struggle to identify agents, prompt: "Does it keep doing things after the first response, or does it stop?"
+- **FERPA / student-data note:** Before any week where students put information into an AI tool, remember that student records are protected under FERPA. Have students use *non-identifying* example data (a made-up persona, a public document) rather than real names, grades, or personal records. Check whether a tool is on your district's approved list before requiring accounts. See the **Equity & Access** section near the end of this guide for no-login and offline alternatives.
 
 ---
 
@@ -104,6 +120,18 @@ By the end of this lesson, students will be able to:
 1. If an LLM is essentially "predicting the next word," why does it seem to understand what we mean?
 2. How is hallucination different from a human making a mistake? Is it more dangerous, or less?
 3. If you were building an AI agent for something important (medical advice, legal documents), what safeguards would you add?
+
+### Responsible-AI Beat — Hallucination vs. Misinformation (10 min)
+Students already learn *why* AI hallucinates above. This beat adds the question that actually matters in the real world: **when is AI being wrong merely annoying, and when is it harmful?**
+
+Draw a simple 2×2 on the board: **Wrong / Right** on one axis, **Low-stakes / High-stakes** on the other.
+
+- A **hallucination** is when the AI is confidently *wrong*. (A mechanism.)
+- **Misinformation** is when a wrong answer *causes harm* because someone acts on it. (An outcome.)
+
+The same hallucination is harmless in one square and dangerous in another: "the AI invented a fake fun-fact for my essay opener" vs. "the AI invented a fake medication dosage and someone followed it." The lesson for students: **the responsibility isn't just to notice AI is wrong — it's to fact-check *before acting*, especially when the stakes are high.**
+
+Quick activity (do it live): take one confidently-wrong AI answer and have students place it in the right square, then name what they'd verify before acting on it and *how* (a primary source, a second tool, a human expert).
 
 ### Student Activity — The Prompt Engineering Challenge
 Students compete to get the best output from an AI using only prompt engineering (no code). Three rounds:
@@ -149,7 +177,21 @@ By the end of this lesson, students will be able to:
 2. If an AI can search the internet in real time, does that solve the hallucination problem? Why or why not?
 3. What personal information would you be comfortable storing in an AI's long-term memory about you? Where's your limit?
 
-### Student Activity — Build a Memory Bot
+### Student Activity — Part A: See RAG Work (no code)
+RAG is a learning objective this week, so students should *experience retrieval*, not just hear the analogy. Using a free no-code RAG tool, students ground an AI in a document and watch it answer from that source:
+
+**Tool options (pick one):**
+- **NotebookLM** (notebooklm.google.com) — upload sources, ask questions, get answers *with citations back to the source*. The citations make retrieval visible, which is the whole point.
+- **Perplexity** (perplexity.ai) — ask a question and watch it cite the web pages it retrieved before answering.
+
+**Steps:**
+1. Feed in a document everyone shares — the **school handbook**, a class syllabus, or a public article. (Use a *public/non-identifying* document — see the FERPA note.)
+2. Ask 3 questions the document answers (e.g., "What's the attendance policy?") and 1 question it does **not** answer.
+3. Observe: for the answerable questions, where did the answer come from? For the unanswerable one, did the tool say "not in the source," or did it make something up?
+
+Document: *Which answers were grounded in the source vs. invented? How did seeing the citation change your trust in the answer?* This is the difference between an AI that **retrieves** and one that only **generates** — the core idea of RAG.
+
+### Student Activity — Part B: Build a Memory Bot (optional / if time)
 Using a free no-code platform (e.g., Claude.ai, ChatGPT with memory, or Zapier AI), students:
 1. Start a conversation about a topic they care about (a hobby, a sports team, a show)
 2. Give the AI specific facts to remember (their preferences, opinions, background)
@@ -159,8 +201,10 @@ Using a free no-code platform (e.g., Claude.ai, ChatGPT with memory, or Zapier A
 Then students document: What did it remember? What did it forget? What would make this more useful in a real product?
 
 ### Teacher Notes
-- RAG is the most practically important concept in this week. The analogy of "open-book test" lands well with students.
+- RAG is the most practically important concept in this week. The analogy of "open-book test" lands well with students — but Part A lets them *see* the open book, which is far stickier than the analogy alone.
+- NotebookLM is ideal here because every answer links back to the exact source passage. When students see "the AI pulled this from page 4," retrieval stops being abstract.
 - Context window limits are easy to demonstrate live: paste a very long document and ask the AI about the beginning after it has processed the end.
+- **Access note:** If your district blocks these tools or student logins, see the **Equity & Access** section for a teacher-projected version and an unplugged paper-RAG alternative.
 
 ---
 
@@ -211,9 +255,22 @@ Where does a human need to stay in the loop? _______________
 What's the biggest risk if something goes wrong? _______________
 ```
 
+### Oversight-by-Design Add — Annotate Your Approval Checkpoints
+After pairs draw their pipeline (Orchestrator → Worker → Worker → …), give them one more task: **draw a 🛑 stop sign on the diagram everywhere a human must approve before the agent continues.** A checkpoint is required before any action that is *irreversible or affects someone else* — sending an email, spending money, publishing content, submitting a form, sharing personal data.
+
+For each 🛑 they place, they answer:
+```
+Checkpoint at: _______________ (which handoff / action)
+Why a human must approve here: _______________
+What the human is checking for: _______________
+```
+
+This turns "human-in-the-loop" from a vocabulary word into a design decision. The lesson: **good agent systems decide where humans approve *before* they're built, not after something goes wrong.**
+
 ### Teacher Notes
 - Students find the "team analogy" very intuitive. Push them to think about failure modes — what happens when one agent produces bad output that the next agent uses without checking?
 - Human-in-the-loop is worth emphasizing: most production systems have at least one human checkpoint before irreversible actions (sending emails, making purchases, publishing content).
+- A useful litmus test for students placing 🛑 checkpoints: "If the agent gets this step wrong, can you undo it?" If no, a human belongs in the loop there.
 
 ---
 
@@ -253,6 +310,11 @@ Suggested tools: knowledge base (upload your own notes), question generation
 Goal: Given a genre, theme, and length, the agent writes a short story and then critiques its own writing.  
 Suggested tools: writing, self-review
 
+**Option D — The Community Impact Agent** ★ *(capstone track)*  
+Goal: Pick a real problem in your school or community (food-drive logistics, a multilingual welcome guide for new students, a study-resource finder, a local-volunteering matcher) and build an agent that helps with it.  
+Suggested tools: web search, knowledge base, summarization — plus a one-page **"agent policy"** the student writes: who it's for, what data it uses, where a human must approve, and what could go wrong.  
+*This is the recommended track for students building a portfolio piece (see Capstone below) — they demo the build **and** the policy together.*
+
 ### Build Worksheet
 ```
 Agent Name: _______________
@@ -265,17 +327,28 @@ One thing your agent does surprisingly well: _______________
 One thing it still can't do: _______________
 ```
 
+### Demo Day — The Three Accountability Questions
+Every student must answer these three questions during their demo. They're not optional extra credit — they're part of the grade, and they make accountability a *presentation skill* (which is exactly what they'll need in college and on the job):
+
+1. **What could go wrong?** — Name a realistic failure mode of your agent.
+2. **Who is responsible if it fails?** — If someone relied on your agent and it gave bad output, who's accountable, and how would they catch it?
+3. **What data did you use?** — What did your agent read or store, and is any of it sensitive?
+
+This closes the loop opened in Week 1 ("Who owns this agent's decisions?"). Students who can build *and* answer these three questions are demonstrating the mindset real AI teams are hired for.
+
 ### Demo Day Rubric
 | Criteria | 1 | 2 | 3 |
 |---|---|---|---|
 | Agent completes its stated goal | Rarely | Sometimes | Consistently |
 | Student can explain how it works | Vague | Partially | Clearly |
 | Student identified at least one failure mode | No | Partially | Yes, with fix attempt |
+| **Answers the 3 accountability questions** | Skips or can't answer | Answers some | Clear, thoughtful answers to all three |
 | Presentation clarity | Hard to follow | Understandable | Clear and engaging |
 
 ### Teacher Notes
 - Give students 5 minutes of "break it on purpose" time during testing — ask them to try to make their agent fail. This teaches adversarial thinking and builds intuition for robustness.
 - Some agents will work well, some won't. That's the lesson. The post-build debrief is more important than the build itself.
+- The three accountability questions reward thoughtfulness over polish — a modest agent with sharp answers should out-score a flashy one whose builder can't say what could go wrong.
 
 ---
 
@@ -301,8 +374,9 @@ By the end of this lesson, students will be able to:
 - **0:00–0:15** — Review: What were the failure modes from Week 5 demo day? Categorize them on the board.
 - **0:15–0:35** — Lecture: The 4 major risk categories in agentic AI (misinformation, bias, privacy, autonomy gone wrong). Real examples from deployed systems.
 - **0:35–0:55** — Ethics Debate (below)
-- **0:55–0:70** — Career landscape: AI Engineer, ML Engineer, AI Safety Researcher, Prompt Engineer, AI Ethics Officer — what each role does and what skills they need.
-- **0:70–0:75** — Final reflection
+- **0:55–0:65** — Career landscape: AI Engineer, ML Engineer, AI Safety Researcher, Prompt Engineer, AI Ethics Officer — what each role does and what skills they need.
+- **0:65–0:72** — Careers in Responsible AI (below)
+- **0:72–0:75** — Final reflection
 
 ### The Ethics Debate
 Split the class into three groups. Each group argues one position, then presents:
@@ -312,6 +386,19 @@ Split the class into three groups. Each group argues one position, then presents
 - **Group A — Build it:** The benefits outweigh the risks. Present the case for deployment.
 - **Group B — Don't build it:** The risks are too high. Present the case against.
 - **Group C — Build it with constraints:** It's possible, but only with specific safeguards. Propose the safeguard system.
+
+### Careers in Responsible AI (7 min)
+The fastest-growing AI jobs aren't all "engineer." As AI gets deployed everywhere, organizations need people who make sure it's used *well* — and many of these roles value judgment, writing, and ethics over heavy coding. Share a few:
+
+| Role | What they do | Strengths it rewards |
+|---|---|---|
+| **AI Policy Analyst** | Shapes the rules and laws for how AI can be used | Writing, civics, critical thinking |
+| **AI Ethics Officer** | Sets a company's responsible-AI principles and reviews products against them | Ethics, communication, judgment |
+| **AI Auditor** | Tests deployed AI systems for bias, safety, and compliance — like a financial auditor, but for algorithms | Detail, fairness, investigation |
+| **AI Product Manager** | Decides what an AI product should and shouldn't do, and for whom | Empathy, prioritization, communication |
+| **AI Trainer / Red-teamer** | Tries to break AI systems on purpose to find harms before users do | Creativity, adversarial thinking |
+
+**Why this matters here:** these are on-ramps into AI for students who love writing, debate, law, art, or helping people — not only those who love code. **Who holds these roles shapes whose interests AI protects.** For students from under-resourced and Title I schools, representation in AI *leadership and oversight* is just as important as representation in engineering — and these paths are wide open right now.
 
 ### Final Reflection Worksheet
 ```
@@ -331,6 +418,66 @@ A career in AI that interests me is _______________ because _______________
 ### Teacher Notes
 - The hospital debate generates strong opinions. Good. Let it run. Bring it back by asking: "Is there a version of this that all three groups could accept?"
 - Career discussion: emphasize that AI careers are not just for coders. Ethics, law, communication, product design, and education are all critical fields right now.
+
+---
+
+## Capstone — Build + Policy (Portfolio Piece)
+
+Students who choose **Option D — The Community Impact Agent** in Week 5 finish the course with a portfolio piece that shows *both* skills employers and admissions officers look for: the ability to **build** and the judgment to **govern**.
+
+The capstone has two parts, presented together:
+1. **The agent** — a working Community Impact Agent that helps with a real problem in their school or community.
+2. **The one-page agent policy** — who it's for, what data it uses, where a human approves (the 🛑 checkpoints from Week 4), and answers to the three accountability questions from Week 5.
+
+> **Why this is a strong college-application artifact:** most students can say "I used AI." Very few can say "I built an AI agent for my community, *and* I can explain what could go wrong, who's accountable, and how I protected people's data." That second sentence is the differentiator. Encourage students to keep their build worksheet, policy page, and a 60-second demo recording together as one portfolio entry.
+
+---
+
+## Equity & Access
+
+This curriculum is for **every** classroom — including schools where logins are restricted, devices are shared, or tools are firewalled. Each tool-based activity has a lower-barrier path:
+
+### No-login / no-account fallback
+- **Teacher-projected mode:** The teacher runs the tool once on the projector and the class directs it together. Students complete the worksheet from the shared demo — no student accounts needed. Works for every activity in Weeks 2, 3, and 5.
+- **Approved-tool check:** Before requiring any account, confirm the tool is on your district's approved list and meets your data/privacy rules (see the FERPA note in Week 1).
+
+### Unplugged / offline alternatives
+- **Week 3 (RAG), paper version:** Give each group a one-page "source document" and a set of questions. They may only answer using sentences highlighted in the document — and must cite the line. Asking a question the page can't answer = they must write "not in the source." This *is* RAG, by hand.
+- **Week 4 (multi-agent):** Already unplugged — it's a paper pipeline-design activity.
+- **Week 5 (build):** Students who can't access a builder can write a complete **agent spec** (goal, tools, system prompt, checkpoints, failure modes) on paper and "run" it as a role-play with a partner acting as the agent.
+
+### Short on time? The 45-minute track
+Every week compresses to ~45 minutes by trimming to the core:
+
+| Week | 45-min core (keep) | Trim |
+|---|---|---|
+| 1 | Loop lecture + Agent Hunt + accountability beat | Extended group exploration |
+| 2 | LLM/hallucination lecture + 1 prompt round + Wrong-vs-Harmful 2×2 | Run only Round 1 of the challenge |
+| 3 | RAG demo (Part A) + debrief | Skip Part B Memory Bot |
+| 4 | Pipeline design + 🛑 checkpoint annotation | Shorten gallery walk |
+| 5 | Build + demo with the 3 accountability questions | Reduce build time; demo in small groups |
+| 6 | Risk lecture + ethics debate + Responsible-AI careers | Shorten final reflection to exit-ticket |
+
+### Reduce blank-page anxiety — use worked examples
+For each worksheet, project or hand out **one filled-in example** before students start their own (e.g., a completed Agent Profile for "Google Maps," a sample pipeline with checkpoints, a model agent policy). Seeing one finished example is the single biggest unblock for students who freeze on an empty form. Teachers can fill one in live in 2 minutes, or reuse a strong student example from a previous run.
+
+---
+
+## Portfolio Tracker
+
+The course is designed so each week produces **one artifact**. Collected together, they tell a complete story — concept understanding, build skill, and responsible-AI judgment. Have students keep these in one folder (a doc, a slide deck, or the printable tracker):
+
+| Week | Artifact | Shows |
+|---|---|---|
+| 1 | Agent Profile (Agent Hunt) | Understands the Think → Act → Observe loop |
+| 2 | Winning prompt + Wrong-vs-Harmful placement | Prompting skill + fact-checking judgment |
+| 3 | RAG notebook screenshot with citations | Understands retrieval / grounding |
+| 4 | Pipeline diagram with 🛑 checkpoints | Designs oversight into a system |
+| 5 | Working agent + build worksheet | Can build and debug an agent |
+| 5★ | One-page agent policy + 3 accountability answers | Accountability as a skill |
+| 6 | Final reflection + a Responsible-AI career they're curious about | Ethical reasoning + future direction |
+
+A web version of this tracker ships as **`portfolio.html`** in this repo — students can fill it in, see their progress, and print/export the result as their portfolio summary.
 
 ---
 

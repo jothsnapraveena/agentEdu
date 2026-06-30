@@ -165,8 +165,27 @@
       <p>A bare LLM is like a closed-book test &mdash; it can only use what it memorized during training. <strong>RAG (Retrieval-Augmented Generation)</strong> is like an open-book test &mdash; you look up the right pages before answering. The LLM still does the reasoning, but now with access to real specific information.</p>
     </div>
   </div>
+
   <div class="activity">
-    <div class="activity__badge">&#9999; Activity &mdash; Memory Bot Experiment</div>
+    <div class="activity__badge">&#9999; Activity A &mdash; See RAG Work (no code)</div>
+    <h3>Ground an AI in a real document &mdash; and watch it retrieve</h3>
+    <p class="activity__intro">RAG is easier to <em>see</em> than to explain. Use a free no-code RAG tool to feed in a document and watch the AI answer <strong>from that source</strong>, with citations. Pick one tool: <strong>NotebookLM</strong> (notebooklm.google.com) &mdash; answers cite the exact source passage &mdash; or <strong>Perplexity</strong> (perplexity.ai) &mdash; shows the pages it retrieved.</p>
+    <div class="steps" style="margin-bottom:20px;">
+      <div class="step"><div class="step__num">1</div><div class="step__content"><div class="step__title">Add one shared document</div><div class="step__desc">Use a <em>public, non-identifying</em> document everyone has &mdash; the school handbook, a class syllabus, or a public article. (See the access note below before using student data.)</div></div></div>
+      <div class="step"><div class="step__num">2</div><div class="step__content"><div class="step__title">Ask 3 questions it answers + 1 it can&rsquo;t</div><div class="step__desc">e.g. &ldquo;What&rsquo;s the attendance policy?&rdquo; Then ask one question the document does <strong>not</strong> cover.</div></div></div>
+      <div class="step"><div class="step__num">3</div><div class="step__content"><div class="step__title">Watch where answers come from</div><div class="step__desc">For answerable questions, follow the citation back to the source. For the unanswerable one: did it say &ldquo;not in the source,&rdquo; or invent something?</div></div></div>
+    </div>
+    <div class="field"><label>Tool used</label><input type="text" id="rag-tool" placeholder="NotebookLM / Perplexity"/></div>
+    <div class="field"><label>Which answers were grounded in the source vs. invented?</label><textarea id="rag-grounded" placeholder="What did the citations show? Did the unanswerable question get a made-up answer?"></textarea></div>
+    <div class="field"><label>How did seeing the citation change how much you trusted the answer?</label><textarea id="rag-trust" placeholder="Your insight..."></textarea></div>
+    <div class="callout" style="border-left-color:var(--amber);background:#FFFBEF;margin-top:20px;">
+      <div class="callout__label" style="color:#996600;">&#127760; Access note</div>
+      <p>No logins or tools allowed at your school? Two fallbacks: <strong>(1) Teacher-projected mode</strong> &mdash; the teacher runs one document on the projector and the class directs it together. <strong>(2) Paper RAG</strong> &mdash; groups get a one-page source and may only answer using highlighted lines, citing each one; a question the page can&rsquo;t answer must be marked &ldquo;not in the source.&rdquo; That <em>is</em> RAG, by hand.</p>
+    </div>
+  </div>
+
+  <div class="activity">
+    <div class="activity__badge">&#9999; Activity B &mdash; Memory Bot Experiment (optional)</div>
     <h3>Test what an AI actually remembers</h3>
     <p class="activity__intro">Run this real experiment using Claude.ai or ChatGPT. Follow the four steps and document what you find.</p>
     <div class="steps" style="margin-bottom:20px;">
@@ -210,6 +229,7 @@
   <a href="index.html" class="lesson-footer__logo">Agent<em>Edu</em></a>
   <div style="display:flex;gap:20px;">
     <a href="index.html">&larr; Back to Course</a>
+    <a href="portfolio.html">Your Portfolio</a>
     <a href="./AgentEdu_StudentReference.pdf" download>Reference Card PDF</a>
     <a href="mailto:hello@agentedu.org">hello@agentedu.org</a>
   </div>
